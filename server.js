@@ -4,7 +4,7 @@ const request = require('request');
 const app = express()
 
 const apiKey = "25ccc64efd6ff08a83fe3d19e84a54ec";
-// console.log(apiKey.key);
+
 
 
 app.use(express.static('public'));
@@ -36,6 +36,6 @@ app.post('/', function (req, res) {
   });
 })
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, ()=> {
   console.log('Example app listening on port 3000!')
 })
